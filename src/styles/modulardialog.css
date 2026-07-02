@@ -1,5 +1,9 @@
 :root {
 	--md-backdrop-background: rgb(15 23 42 / 52%);
+	--md-button-font-size: 13px;
+	--md-button-line-height: 1.2;
+	--md-button-min-height: 34px;
+	--md-button-padding: 7px 12px;
 	--md-surface-background: #ffffff;
 	--md-surface-color: #111827;
 	--md-surface-border: 1px solid rgb(15 23 42 / 14%);
@@ -206,15 +210,15 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 34px;
-	padding: 7px 12px;
+	min-height: var(--md-button-min-height);
+	padding: var(--md-button-padding);
 	border: var(--md-button-border);
 	border-radius: var(--md-button-radius);
 	color: var(--md-button-color);
 	background: var(--md-button-background);
 	font: inherit;
-	font-size: 13px;
-	line-height: 1.2;
+	font-size: var(--md-button-font-size);
+	line-height: var(--md-button-line-height);
 	cursor: pointer;
 	transition: background 120ms ease, border-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
 }
@@ -258,10 +262,8 @@
 }
 
 .md-close-button {
-	width: 34px;
-	padding: 0;
-	font-size: 22px;
-	line-height: 1;
+	flex: 0 0 auto;
+	white-space: nowrap;
 }
 
 .md-busy .md-button-primary,

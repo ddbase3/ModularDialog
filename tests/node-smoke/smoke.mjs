@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import {
 	DialogCommandRegistry,
@@ -79,5 +80,12 @@ assert.equal(pluginCommands.execute('echo', 'ok'), 'ok');
 assert.equal(manager.getSlotContributions('main').length, 1);
 assert.equal(manager.getSlotContributions('main')[0].source, 'testPlugin');
 manager.destroy();
+
+const css = readFileSync(new URL('../../src/styles/modulardialog.css', import.meta.url), 'utf8');
+const closeButtonRule = css.match(/\.md-close-button\s*\{(?<body>[^}]*)\}/)?.groups?.body || '';
+assert.equal(closeButtonRule.includes('font-size'), false);
+assert.equal(closeButtonRule.includes('width:'), false);
+assert.equal(css.includes('--md-button-font-size'), true);
+assert.equal(css.includes('font-size: var(--md-button-font-size);'), true);
 
 console.log('ModularDialog node smoke passed.');
