@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ModularDialog async actions demo</title>
+	<link rel="stylesheet" href="../../src/styles/modulardialog.css" />
+	<style>
+		body {
+			font-family: system-ui, sans-serif;
+			margin: 32px;
+		}
+	</style>
+</head>
+<body>
+	<h1>ModularDialog async actions demo</h1>
+	<button type="button" id="openDialog">Open async dialog</button>
+	<div id="content" hidden>
+		<p>The save button simulates an async action and shows a busy state.</p>
+	</div>
+	<script type="module" src="async-actions.js"></script>
+</body>
+</html>

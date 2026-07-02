@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ModularDialog basic demo</title>
+	<link rel="stylesheet" href="../../src/styles/modulardialog.css" />
+	<style>
+		body {
+			font-family: system-ui, sans-serif;
+			margin: 32px;
+		}
+
+		.demo-form {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(220px, 1fr));
+			gap: 12px;
+		}
+
+		.demo-form label {
+			display: grid;
+			gap: 4px;
+			font-size: 13px;
+		}
+
+		.demo-form input,
+		.demo-form textarea {
+			padding: 6px 8px;
+			border: 1px solid #cfcfcf;
+			border-radius: 6px;
+			font: inherit;
+		}
+
+		.demo-form textarea {
+			grid-column: 1 / -1;
+			min-height: 120px;
+		}
+	</style>
+</head>
+<body>
+	<h1>ModularDialog basic demo</h1>
+	<button type="button" id="openDialog">Open dialog</button>
+
+	<form id="demoForm" class="demo-form" hidden>
+		<label>
+			Preset ID
+			<input name="id" value="example_preset" />
+		</label>
+		<label>
+			Label
+			<input name="label" value="Example preset" />
+		</label>
+		<label>
+			Description
+			<textarea name="description">Reusable dialog content.</textarea>
+		</label>
+	</form>
+
+	<script type="module" src="basic.js"></script>
+</body>
+</html>

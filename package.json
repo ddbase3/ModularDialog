@@ -1,0 +1,21 @@
+{
+	"name": "modulardialog",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"description": "Slot-based Vanilla JavaScript dialog core with reusable shell and behavior plugins.",
+	"scripts": {
+		"serve": "python3 -m http.server 8000",
+		"smoke": "node tests/node-smoke/smoke.mjs"
+	},
+	"keywords": [
+		"dialog",
+		"modal",
+		"slots",
+		"vanilla-js",
+		"es-modules",
+		"plugin-system"
+	],
+	"dependencies": {},
+	"devDependencies": {}
+}

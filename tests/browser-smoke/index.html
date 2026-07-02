@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ModularDialog browser smoke</title>
+	<link rel="stylesheet" href="../../src/styles/modulardialog.css" />
+	<style>
+		body {
+			font-family: system-ui, sans-serif;
+			margin: 32px;
+		}
+
+		.md-smoke-pass {
+			color: #276028;
+		}
+
+		.md-smoke-fail {
+			color: #8a1f1f;
+		}
+	</style>
+</head>
+<body>
+	<h1>ModularDialog browser smoke</h1>
+	<button type="button" id="opener">Open target</button>
+	<div id="fixture"></div>
+	<div id="results"></div>
+	<script type="module" src="smoke.js"></script>
+</body>
+</html>
